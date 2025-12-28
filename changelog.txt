@@ -1,0 +1,17 @@
+Viking Settlement Tycoon — Changelog
+
+v1.1.0
+- Added version display across PC/Web, Android, and Wear OS builds
+- Introduced changelog file (this document)
+- Improved Settings modals to include Export/Import and version info
+- Stability: save/load guards, scout sanitization, fog-of-war restoration improvements
+- Wear OS: build tray, save/import/export, phone transfer helper
+
+v1.0.1
+- Lightning effects, ambient audio rotation, production popups
+- Persistent settlement stats and New Territory flow improvements
+- Splash screen with subtle flame effect
+
+v1.0.0
+- Initial release: Infinite terrain, buildings, scouts, day/night
+
