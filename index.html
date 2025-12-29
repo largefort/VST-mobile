@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, orientation=portrait">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
     <title>Viking Settlement Tycoon - Mobile</title>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="android-styles.css">
@@ -13,12 +16,6 @@
         }
         
         // Prevent zoom on double tap
-        document.addEventListener('touchstart', function(e) {
-            if (e.touches.length > 1) {
-                e.preventDefault();
-            }
-        }, { passive: false });
-        
         let lastTouchEnd = 0;
         document.addEventListener('touchend', function(event) {
             const now = (new Date()).getTime();
@@ -196,7 +193,7 @@
                 <div class="mobile-modal-body">
                     <div class="device-info-item">
                         <span class="device-label">App Version:</span>
-                        <span id="gameVersion">1.0.0</span>
+                        <span id="gameVersion">1.1.0</span>
                     </div>
                     <div class="device-info-item">
                         <span class="device-label">Screen Size:</span>
@@ -246,6 +243,10 @@
                         <h4>📊 Management</h4>
                         <p>Check Stats tab to monitor your settlement's progress.</p>
                     </div>
+                    <div class="help-section">
+                        <h4>🎮 Controls</h4>
+                        <p>Drag to pan, pinch to zoom, double-tap to quick zoom.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -262,6 +263,7 @@
                         <button id="mobileExportSaveBtn" class="mobile-action-btn"><img src="save_icon.png" class="mobile-btn-icon"> Export Save</button>
                         <button id="mobileImportSaveBtn" class="mobile-action-btn"><img src="save_icon.png" class="mobile-btn-icon"> Import Save</button>
                     </div>
+                    <p style="margin-top:10px; font-size:0.85rem; color:#ccc; text-align:center;">Version: <span id="mobileVersionText">1.1.0</span></p>
                 </div>
             </div>
         </div>
@@ -278,6 +280,6 @@
     <script src="vsync.js"></script>
     <script src="bugfix-helper.js"></script>
     <script src="app-version.js"></script>
-    <script src="android.js"></script>
+    <script type="module" src="android.js"></script>
 </body>
 </html>
